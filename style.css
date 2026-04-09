@@ -25,6 +25,7 @@ GREY COLOR:
 --- 05 SHADOWS
 
 --- 06 BORDER RADIUS
+9px Default
 
 --- 07 WHITESPACE
 
@@ -52,9 +53,68 @@ body{
     font-weight: 400;
     color: #555;
 }
+
+.header{
+display: flex;
+justify-content: space-between;
+height: 9.6rem;
+align-items: center;
+background-color: #fdf2e9;
+padding: 0 4.8rem;
+}
+
+.logo{
+    height: 2.2rem;
+}
+.main-nav{
+    
+}
+.main-nav-list{
+    display: flex;
+    gap: 3.2rem;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+
+}
+.main-nav-link:link,
+.main-nav-link:visited
+{
+   text-decoration: none; 
+   color: #333;
+   font-size: 1.8rem ;
+   font-weight: 500;
+   transition: all 0.3ms;
+   display: inline-block;
+  
+}
+
+.main-nav-link:hover,
+.main-nav-link:active
+{
+    display: inline-block;
+   color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited
+{
+    padding: 1.2rem 2.4rem;
+   background-color: #e67e22;
+   border-radius: 9px;
+   color: #fff;
+   display: inline-block;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active
+{
+   background-color: #cf711f;
+}
+
 .hero-section{
     background-color: #fdf2e9;
-    padding: 9.2rem 0;
+    padding: 4.8rem 0 9.6rem 0;
 
 
 }
@@ -66,6 +126,7 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap:9.6rem ;
+    padding: 0 3.2rem;
 }
 .hero-text-box{
 
@@ -165,4 +226,162 @@ body{
 
 .delivered-text span{
     color: #cf711f;
+}
+
+/* Section how it woorks  */
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.section-how{
+    padding: 9.6rem 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    row-gap: 9.6rem;
+    column-gap: 6.2rem;
+}
+
+.grid-2-columns{
+     grid-template-columns: repeat(2 , 1fr);
+}
+
+.grid-3-columns{
+     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-columns{
+     grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-center-v{
+    align-items: center;
+}
+
+.section-how{
+    padding: 9.6rem;
+}
+
+.step-img{
+    width: 35%;
+}
+
+.heading-primary,
+.heading-secondary{
+    color: #333;
+    /* color: #45260a; */
+    color: #34304a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.heading-primary{
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+.heading-secondary{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+.heading-tertiary{
+    font-size: 3.0rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+.subheading{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.step-number{
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+
+}
+.step-img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+
+}
+/* .step-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+} */
+
+
+.step-img-box::before,
+.step-img-box::after{
+   content: "";
+   display: block;
+  
+   border-radius: 50%;
+   position: absolute;
+}
+.step-img-box::before{
+   width: 60%;
+   /* height: 60%; */
+   padding-bottom: 60%;
+   background-color: #fdf2e9;
+    z-index: -2;
+}
+
+.step-img-box::after{
+   width: 45%;
+  
+   /* height: 60%; */
+   padding-bottom: 45%;
+   background-color: #fae5d3;
+    z-index: -1;
+}
+
+.step-description{
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+
+/* FEATURED IN SECTION */
+
+.section-featured{
+    padding: 4.8rem 0;
+}
+.heading-featured-in{
+font-size: 1.4rem;
+text-transform: uppercase;
+letter-spacing: 0.75px;
+font-weight: 500;
+text-align: center;
+margin-bottom: 2.4rem;
+color: #888;
+}
+
+.featured-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.featured-logo img{
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: 50%;
 }
